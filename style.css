@@ -1,5 +1,6 @@
 body{
 	color: white;
+	/*background*/
 	background: rgba(0, 0, 0, 0.5) url(assets/img/bg.jpg);
 	background-blend-mode: darken;
 	background-size: cover;
@@ -10,7 +11,7 @@ body{
 	display: flex;
 	justify-content: center;
 	height: 600px;
-	align-items: center;
+	align-items: flex-end;
 }
 .profile-container img{
 	width: 300px;
@@ -39,16 +40,20 @@ body{
 
 .about-container{
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	height: 600px;
+	padding-top: 30px;
 }
+
 .about-container .about p{
 	font-size: 20px;
+	text-align: center;
 }
 .about .social{
 	display: flex;
 	margin-top: 40px;
+	justify-content: center;
 }
 .about .social h5{
 	margin-right: 20px;
@@ -60,8 +65,17 @@ body{
 @media (min-width: 992px) {
 	.profile-container{
 		justify-content: flex-end;
+		align-items: center;
 	}
-	.about-continer{
+	.about-container{
+		justify-content: flex-start;
+		align-items: center;
+		padding-top: 0;
+	}
+	.about-container .about p{
+		text-align: left;
+	}
+	.about .social{
 		justify-content: flex-start;
 	}
  }
